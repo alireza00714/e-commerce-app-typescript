@@ -1,0 +1,19 @@
+.header {
+  background-color: #620742;
+}
+
+.header__cartcount {
+  background-color: #f2cd60;
+  color: #211e20;
+}
+
+.header__category {
+  font-size: 1.25rem;
+}
+
+.header__brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

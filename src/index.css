@@ -1,13 +1,173 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* vazir font & farsi digits */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Vazir;
+  src: url("../node_modules/vazir-font/dist/Vazir-Regular.eot");
+  src: url("../node_modules/vazir-font/dist/Vazir-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Vazir-Regular.woff2") format("woff2"),
+    url("../node_modules/vazir-font/dist/Vazir-Regular.woff") format("woff"),
+    url("../node_modules/vazir-font/dist/Vazir-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url("../node_modules/vazir-font/dist/Vazir-Bold.eot");
+  src: url("../node_modules/vazir-font/dist/Vazir-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Vazir-Bold.woff2") format("woff2"),
+    url("../node_modules/vazir-font/dist/Vazir-Bold.woff") format("woff"),
+    url("../node_modules/vazir-font/dist/Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url("../node_modules/vazir-font/dist/Vazir-Black.eot");
+  src: url("../node_modules/vazir-font/dist/Vazir-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Vazir-Black.woff2") format("woff2"),
+    url("../node_modules/vazir-font/dist/Vazir-Black.woff") format("woff"),
+    url("../node_modules/vazir-font/dist/Vazir-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url("../node_modules/vazir-font/dist/Vazir-Medium.eot");
+  src: url("../node_modules/vazir-font/dist/Vazir-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Vazir-Medium.woff2") format("woff2"),
+    url("../node_modules/vazir-font/dist/Vazir-Medium.woff") format("woff"),
+    url("../node_modules/vazir-font/dist/Vazir-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url("../node_modules/vazir-font/dist/Vazir-Light.eot");
+  src: url("../node_modules/vazir-font/dist/Vazir-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Vazir-Light.woff2") format("woff2"),
+    url("../node_modules/vazir-font/dist/Vazir-Light.woff") format("woff"),
+    url("../node_modules/vazir-font/dist/Vazir-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url("../node_modules/vazir-font/dist/Vazir-Thin.eot");
+  src: url("../node_modules/vazir-font/dist/Vazir-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Vazir-Thin.woff2") format("woff2"),
+    url("../node_modules/vazir-font/dist/Vazir-Thin.woff") format("woff"),
+    url("../node_modules/vazir-font/dist/Vazir-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: Vazir-FD;
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Regular-FD.eot");
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Regular-FD.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Regular-FD.woff2")
+      format("woff2"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Regular-FD.woff")
+      format("woff"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Regular-FD.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir-FD;
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Bold-FD.eot");
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Bold-FD.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Bold-FD.woff2")
+      format("woff2"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Bold-FD.woff")
+      format("woff"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Bold-FD.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir-FD;
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Black-FD.eot");
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Black-FD.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Black-FD.woff2")
+      format("woff2"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Black-FD.woff")
+      format("woff"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Black-FD.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir-FD;
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Medium-FD.eot");
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Medium-FD.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Medium-FD.woff2")
+      format("woff2"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Medium-FD.woff")
+      format("woff"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Medium-FD.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir-FD;
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Light-FD.eot");
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Light-FD.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Light-FD.woff2")
+      format("woff2"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Light-FD.woff")
+      format("woff"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Light-FD.ttf")
+      format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir-FD;
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Thin-FD.eot");
+  src: url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Thin-FD.eot?#iefix")
+      format("embedded-opentype"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Thin-FD.woff2")
+      format("woff2"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Thin-FD.woff")
+      format("woff"),
+    url("../node_modules/vazir-font/dist/Farsi-Digits/Vazir-Thin-FD.ttf")
+      format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: Vazir;
+}
+
+html,
+body,
+#root {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #f25757;
 }
