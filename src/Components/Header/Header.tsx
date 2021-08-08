@@ -4,36 +4,38 @@ import { HiMenu } from "react-icons/hi";
 
 const Header = () => {
   return (
-    <header className="w-full px-3 py-4 fixed top-0">
+    <header>
       <div
-        className={`${styles.header} container mx-auto rounded-lg h-16 text-white shadow-md px-3 py-2 flex justify-between items-center relative`}
+        className={`${styles.header} h-16 w-full fixed top-0 z-10 shadow-lg lg:container lg:top-3 lg:rounded-lg lg:left-1/2 lg:transform lg:-translate-x-1/2 flex items-center justify-between px-3`}
       >
-        <div className="flex items-center">
-          <div className="relative cursor-pointer mr-4">
-            <FaShoppingCart color="#ffffff" className="w-8 h-8" />
-            <div
-              className={`${styles["header__cartcount"]} rounded-full fd absolute w-5 h-5 -top-1 -right-2 flex items-center justify-center`}
+        <div className="flex">
+          <div className="relative mr-4 cursor-pointer">
+            <FaShoppingCart size="2rem" fill="#fff" />
+            <span
+              className={`${styles["header__cartcount"]} w-6 h-6 absolute -top-2 -right-2 rounded-full flex items-center justify-center fd font-medium`}
             >
               2
-            </div>
+            </span>
           </div>
           <div className="cursor-pointer">
-            <FaUserCircle className="w-8 h-8" />
+            <FaUserCircle size="2rem" fill="#fff" />
           </div>
         </div>
-        <div
-          className={`flex items-center cursor-pointer ${styles["header__brand"]}`}
-        >
-          <span className="text-3xl	font-black">دیجی مارکت</span>
-          <div className="ml-2">
-            <FaShoppingBag className="w-10 h-10" />
-          </div>
+        <div className="flex items-center cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex">
+          <span className="text-2xl font-black text-white mr-1">
+            دیجی&zwnj;مارکت
+          </span>
+          <span>
+            <FaShoppingBag size="2.5rem" fill="#fff"/>
+          </span>
         </div>
         <div className="flex items-center cursor-pointer">
-          <span className="mr-1 text-xl">دسته بندی محصولات</span>
-          <div>
-            <HiMenu className="w-8 h-8" />
-          </div>
+          <span className="text-white text-lg font-medium hidden lg:block">
+            دسته&zwnj;بندی کالاها
+          </span>
+          <span>
+            <HiMenu size="2rem" fill="#fff" />
+          </span>
         </div>
       </div>
     </header>

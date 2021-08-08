@@ -1,0 +1,27 @@
+.card-container {
+  background-color: #fff;
+}
+
+.card-container__dot-title {
+  background-color: #9c203f;
+}
+
+.swiper-container {
+  padding-left: 1rem;
+  padding-right: 4rem;
+  padding-bottom: 5rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 40%;
+  color: #9c203f;
+}
+
+.swiper-pagination{
+  margin-bottom: 1rem;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #9c203f;
+}
