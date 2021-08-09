@@ -1,8 +1,10 @@
 import styles from "./Header.module.css";
 import { FaShoppingCart, FaUserCircle, FaShoppingBag } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
+import { useState } from "react";
 
 const Header = () => {
+  const [isCategoryOpen, setIsCategoryOpen] = useState<boolean>(false);
   return (
     <header>
       <div
@@ -22,21 +24,24 @@ const Header = () => {
           </div>
         </div>
         <div className="flex items-center cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex">
-          <span className="text-2xl font-black text-white mr-1">
+          <span className="text-3xl font-black text-white mr-1">
             دیجی&zwnj;مارکت
           </span>
           <span>
-            <FaShoppingBag size="2.5rem" fill="#fff"/>
+            <FaShoppingBag size="2.5rem" fill="#fff" />
           </span>
         </div>
         <div className="flex items-center cursor-pointer">
-          <span className="text-white text-lg font-medium hidden lg:block">
+          <span className="text-white text-xl font-medium">
             دسته&zwnj;بندی کالاها
           </span>
           <span>
             <HiMenu size="2rem" fill="#fff" />
           </span>
         </div>
+        {isCategoryOpen && (
+          <div className={`${styles["header__category"]} absolute right-0 top-14 shadow-lg`}></div>
+        )}
       </div>
     </header>
   );

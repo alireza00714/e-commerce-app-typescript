@@ -7,7 +7,6 @@
 }
 
 .swiper-container {
-  padding-left: 1rem;
   padding-right: 4rem;
   padding-bottom: 5rem;
 }
@@ -18,10 +17,16 @@
   color: #9c203f;
 }
 
-.swiper-pagination{
+.swiper-pagination {
   margin-bottom: 1rem;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background-color: #9c203f;
+}
+
+@media screen and (min-width: 1024px) {
+  .swiper-container{
+    padding-left: 14rem;
+  }
 }

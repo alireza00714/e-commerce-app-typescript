@@ -6,3 +6,9 @@
   background-color: #f2cd60;
   color: #211e20;
 }
+
+.header__category {
+  background-color: #620742;
+  width: 20rem;
+  height: 24rem;
+}

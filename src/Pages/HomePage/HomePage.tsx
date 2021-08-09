@@ -10,8 +10,8 @@ const HomePage = () => {
     <>
       <Header />
       <main className="mb-24">
-        <div className="container mt-24 mx-auto px-4 grid grid-cols-1 grid-ows-1 grap-y-3 mb-8 md:grid-cols-3 md:grid-rows-1 md:gap-3 md:px-10">
-          <div className="hidden md:grid md:grid-cols-1 md:grid-rows-2 md:gap-3">
+        <div className="container mt-24 mx-auto px-4 grid grid-cols-1 grid-ows-1 grap-y-3 mb-8 lg:grid-cols-3 lg:grid-rows-1 lg:gap-3 ">
+          <div className="hidden lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-3">
             <div className="h-52 cursor-pointer">
               <img
                 className="w-full h-full rounded-lg bg-auto"
@@ -31,10 +31,10 @@ const HomePage = () => {
             <Carousel data={carouselData} />
           </div>
         </div>
-        <div className="container px-4 mx-auto mb-8 md:px-10">
+        <div className="container px-4 mx-auto mb-8 ">
           <HomeCardContainer title="پرفروش&zwnj;ترین محصولات" />
         </div>
-        <div className="container px-4 mx-auto mb-8 md:px-10">
+        <div className="container px-4 mx-auto mb-8 ">
           <div className="grid grid-cols-1 grid-rows-2 gap-3 md:grid-rows-1 md:grid-cols-3">
             <div className="h-52 cursor-pointer">
               <img
@@ -52,10 +52,10 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="container px-4 mx-auto mb-8 md:px-10">
+        <div className="container px-4 mx-auto mb-8 ">
           <HomeCardContainer title="پربازدیدترین محصولات" />
         </div>
-        <div className="container px-4 mx-auto md:px-10">
+        <div className="container px-4 mx-auto ">
           <HomeCardContainer title="جدیدترین محصولات" />
         </div>
       </main>

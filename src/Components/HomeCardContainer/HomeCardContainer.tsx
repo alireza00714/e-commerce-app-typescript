@@ -23,7 +23,7 @@ const HomeCardContainer: React.FC<IHomeCardContainer> = ({ title }) => {
         <Swiper
           dir="rtl"
           slidesPerView={1.6}
-          spaceBetween={100}
+          spaceBetween={150}
           navigation={true}
           pagination={{ clickable: true }}
           breakpoints={{
@@ -36,8 +36,16 @@ const HomeCardContainer: React.FC<IHomeCardContainer> = ({ title }) => {
               spaceBetween: 50,
             },
             "1024": {
+              slidesPerView: 4,
+              spaceBetween: 210,
+            },
+            "1280": {
               slidesPerView: 5,
-              spaceBetween: 20,
+              spaceBetween: 140,
+            },
+            "1536": {
+              slidesPerView: 6,
+              spaceBetween: 190,
             },
           }}
         >

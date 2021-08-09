@@ -8,29 +8,29 @@ const Footer = () => {
     <footer
       className={`${styles.footer} flex flex-col lg:flex-row-reverse lg:justify-evenly lg:py-4`}
     >
-      <div className="flex justify-between flex-row-reverse lg:flex-col lg:items-end pt-8 px-4 lg:py-8 mb-8 lg:mb-0">
+      <div className="flex justify-between flex-row-reverse lg:flex-col lg:items-end pt-8 px-8 lg:py-8 mb-8 lg:mb-0">
         <div className="flex items-center lg:mb-6">
           <span className="text-sm text-right">خانه</span>
           <span
-            className={`${styles["footer__items-dot"]} w-2 h-2 rounded-full ml-2`}
+            className={`${styles["footer__items-dot"]} w-2 h-2 rounded-full ml-1`}
           ></span>
         </div>
         <div className="flex items-center lg:mb-6">
           <span className="text-sm text-right">تماس با ما</span>
           <span
-            className={`${styles["footer__items-dot"]} w-2 h-2 rounded-full ml-2`}
+            className={`${styles["footer__items-dot"]} w-2 h-2 rounded-full ml-1`}
           ></span>
         </div>
         <div className="flex items-center lg:mb-6">
           <span className="text-sm text-right">درباره ما</span>
           <span
-            className={`${styles["footer__items-dot"]} w-2 h-2 rounded-full ml-2`}
+            className={`${styles["footer__items-dot"]} w-2 h-2 rounded-full ml-1`}
           ></span>
         </div>
         <div className="flex items-center lg:mb-6">
           <span className="text-sm text-right">چرا دیجی مارکت؟</span>
           <span
-            className={`${styles["footer__items-dot"]} w-2 h-2 rounded-full ml-2`}
+            className={`${styles["footer__items-dot"]} w-2 h-2 rounded-full ml-1`}
           ></span>
         </div>
       </div>

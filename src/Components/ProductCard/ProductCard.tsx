@@ -4,7 +4,7 @@ import { AiFillHeart } from "react-icons/ai";
 
 const ProductCard = () => {
   return (
-    <div className="w-52 h-80 border-2 border-gray-200 rounded-md hover:shadow-lg transition-shadow flex flex-col justify-between p-2">
+    <div className="w-52 h-80 border-2 border-gray-200 rounded-xl hover:shadow-lg transition-shadow flex flex-col justify-between p-2">
       <div>
         <div>
           <img
