@@ -1,10 +1,9 @@
 import styles from "./Header.module.css";
 import { FaShoppingCart, FaUserCircle, FaShoppingBag } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
-import { useState } from "react";
 
 const Header = () => {
-  const [isCategoryOpen, setIsCategoryOpen] = useState<boolean>(false);
+  // const [isCategoryOpen, setIsCategoryOpen] = useState<boolean>(false);
   return (
     <header>
       <div
@@ -39,9 +38,9 @@ const Header = () => {
             <HiMenu size="2rem" fill="#fff" />
           </span>
         </div>
-        {isCategoryOpen && (
+        {/* {isCategoryOpen && (
           <div className={`${styles["header__category"]} absolute right-0 top-14 shadow-lg`}></div>
-        )}
+        )} */}
       </div>
     </header>
   );
