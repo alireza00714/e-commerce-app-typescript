@@ -1,0 +1,15 @@
+.cart {
+  background-color: #fff;
+}
+
+.cart__dot-title {
+  background-color: #9c203f;
+}
+
+.cart__reset-btn {
+  background-color: #9c203f;
+}
+
+.divider {
+  border: #9c203f 0.25px solid;
+}

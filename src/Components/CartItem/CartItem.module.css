@@ -1,0 +1,11 @@
+.cart-item__quantity {
+  border: #9c203f 2px solid;
+}
+
+.cart-item__price {
+  color: #9c203f;
+}
+
+.cart-item__delete-btn-text {
+  color: #9c203f;
+}
