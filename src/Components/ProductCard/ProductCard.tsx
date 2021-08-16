@@ -4,7 +4,9 @@ import { AiFillHeart } from "react-icons/ai";
 
 const ProductCard = () => {
   return (
-    <div className="w-52 h-80 border-2 border-gray-200 rounded-xl hover:shadow-lg transition-shadow flex flex-col justify-between p-2">
+    <div
+      className={`${styles.direction} w-52 h-80 border-2 border-gray-200 rounded-xl hover:shadow-lg transition-shadow flex flex-col justify-between p-2`}
+    >
       <div>
         <div>
           <img
@@ -13,7 +15,7 @@ const ProductCard = () => {
             alt=""
           />
         </div>
-        <span className="text-sm cursor-pointer text-right">
+        <span className="text-sm cursor-pointer text-right fd">
           پنیر لیقوان اوجان لبن مقدار 650 گرم
         </span>
       </div>

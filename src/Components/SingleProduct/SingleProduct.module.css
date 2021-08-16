@@ -1,0 +1,52 @@
+.single-product {
+  background-color: #ffffff;
+}
+
+.single-product__add-to-card-container {
+  background-color: #f5f5f5;
+}
+
+.single-product__add-to-card-btn {
+  background-color: #9c203f;
+}
+
+.single-product__divider {
+  border: #c4c4c4 0.25px solid;
+}
+
+.single-product__add-to-wishlist-btn,
+.single-product__share-btn {
+  transition: background-color 200ms ease-in;
+  width: 2rem;
+  height: 2rem;
+  border: 2px #9c203f solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-product__share-btn > svg,
+.single-product__add-to-wishlist-btn > svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.single-product__share-btn path,
+.single-product__add-to-wishlist-btn path {
+  fill: #9c203f;
+  transition: fill 200ms ease-in;
+}
+
+.single-product__share-btn:hover,
+.single-product__add-to-wishlist-btn:hover {
+  background-color: #9c203f;
+  cursor: pointer;
+  transition: background-color 200ms ease-in;
+}
+
+.single-product__share-btn:hover path,
+.single-product__add-to-wishlist-btn:hover path {
+  fill: #fff;
+  transition: fill 200ms ease-in;
+}

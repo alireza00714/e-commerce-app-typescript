@@ -1,10 +1,10 @@
 import "./App.css";
-import CartPage from "./Pages/CartPage/CartPage";
+import ProductsListPage from "./Pages/ProductsListPage/ProductsListPage";
 
 function App() {
   return (
     <div className="App">
-      <CartPage />
+      <ProductsListPage />
     </div>
   );
 }

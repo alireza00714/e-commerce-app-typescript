@@ -1,0 +1,29 @@
+.product-list__sort-item {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  z-index: +1;
+}
+
+.product-list__sort-checkmark {
+  position: absolute;
+  background-color: transparent;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.product-list__sort-item > input {
+  display: none;
+}
+
+.product-list__sort-item > input:checked + .product-list__sort-checkmark {
+  background-color: #f2cd60;
+}
+
+.product-list__divider {
+  border: #c4c4c4 0.25px solid;
+}

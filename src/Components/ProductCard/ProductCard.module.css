@@ -38,3 +38,7 @@
 .product-card__price {
   color: #9c203f;
 }
+
+.direction{
+  direction: rtl;
+}

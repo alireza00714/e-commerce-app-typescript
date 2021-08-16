@@ -8,6 +8,7 @@ const Header = () => {
     <header>
       <div
         className={`${styles.header} h-16 w-full fixed top-0 z-10 shadow-lg lg:container lg:top-3 lg:rounded-lg lg:left-1/2 lg:transform lg:-translate-x-1/2 flex items-center justify-between px-3`}
+        
       >
         <div className="flex">
           <div className="relative mr-4 cursor-pointer">

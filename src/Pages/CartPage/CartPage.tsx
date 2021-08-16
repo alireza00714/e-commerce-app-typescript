@@ -7,7 +7,7 @@ const CartPage = () => {
   return (
     <>
       <Header />
-      <main className="mb-24 mt-24">
+      <main className="my-24">
         <Cart />
       </main>
       <Footer />

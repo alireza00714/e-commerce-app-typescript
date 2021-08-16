@@ -1,0 +1,19 @@
+.login__title-text {
+  color: #9c203f;
+}
+
+.login__input {
+  background-color: #f4f4f4;
+}
+
+.login__input:focus {
+  background-color: #fafafa;
+}
+
+.login__btn {
+  background-color: #9c203f;
+}
+
+.login__register-link {
+  color: #f25757;
+}
