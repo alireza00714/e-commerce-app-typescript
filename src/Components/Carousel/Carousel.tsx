@@ -22,13 +22,13 @@ const Carousel: React.FC<ICarousel> = ({ data }) => {
     <div className="w-full h-full relative">
       <MdKeyboardArrowLeft
         onClick={prevSlide}
-        color="ffffff"
+        color="#9c203f"
         size="3rem"
         className="absolute left-1 top-1/2 transform -translate-y-1/2 cursor-pointer"
       />
       <MdKeyboardArrowRight
         onClick={nextSlide}
-        color="ffffff"
+        color="#9c203f"
         size="3rem"
         className="absolute right-1 top-1/2 transform -translate-y-1/2 cursor-pointer"
       />

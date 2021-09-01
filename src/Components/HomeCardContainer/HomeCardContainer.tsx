@@ -4,7 +4,6 @@ import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "./HomeCardContainer.css";
-import ProductCard from "../ProductCard/ProductCard";
 
 SwiperCore.use([Pagination, Navigation]);
 
@@ -50,31 +49,31 @@ const HomeCardContainer: React.FC<IHomeCardContainer> = ({ title }) => {
           }}
         >
           <SwiperSlide>
-            <ProductCard />
+            
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard />
+            
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard />
+            
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard />
+            
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard />
+            
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard />
+            
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard />
+            
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard />
+            
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard />
+            
           </SwiperSlide>
         </Swiper>
       </div>

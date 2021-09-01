@@ -1,7 +1,8 @@
 import "./LoginPage.styles.css";
 import { FaShoppingBag } from "react-icons/fa";
+import { Link, RouteComponentProps } from "react-router-dom";
 
-const LoginPage = () => {
+const LoginPage = (props: RouteComponentProps) => {
   return (
     <div className="w-full h-full flex justify-center items-center">
       <div className="flex flex-col items-center border border-gray-300 rounded-lg pt-6 pb-4 px-6">
@@ -41,9 +42,12 @@ const LoginPage = () => {
         </button>
         <div className="flex flex-row-reverse gap-1 self-end pr-1">
           <p className="text-xs font-semibold">حساب کاربری ندارید؟</p>
-          <a className="login__register-link text-xs font-semibold" href="sdf">
+          <Link
+            className="login__register-link text-xs font-semibold"
+            to="/register"
+          >
             کلیک کنید
-          </a>
+          </Link>
         </div>
       </div>
     </div>
