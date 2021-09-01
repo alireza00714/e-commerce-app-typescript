@@ -1,6 +1,5 @@
 import styles from "./ProductCard.module.css";
 import { MdAddShoppingCart } from "react-icons/md";
-import { AiFillHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 interface IProps {
@@ -55,9 +54,6 @@ const ProductCard: React.FC<IProps> = ({
           )}
         </div>
         <div className="flex items-center">
-          <div className={`${styles["product-card__add-to-wishlist-btn"]}`}>
-            <AiFillHeart />
-          </div>
           <div className={`${styles["product-card__add-to-cart-btn"]} mr-1`}>
             <MdAddShoppingCart />
           </div>

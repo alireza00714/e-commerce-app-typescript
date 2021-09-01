@@ -31,16 +31,6 @@ const SingleProduct = () => {
       >
         <div className="flex flex-col">
           <div className="flex justify-between items-center flex-row-reverse pl-4 lg:pl-6 lg:flex-row">
-            <div className="flex gap-2">
-              <div className={`${styles["single-product__share-btn"]}`}>
-                <MdShare />
-              </div>
-              <div
-                className={`${styles["single-product__add-to-wishlist-btn"]}`}
-              >
-                <AiFillHeart />
-              </div>
-            </div>
             <div className="flex flex-col gap-2 order-first lg:order-none pr-4 lg:py-6 lg:pr-6">
               <h3 className="text-xl font-semibold text-right">
                 {product?.title}
