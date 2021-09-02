@@ -64,14 +64,7 @@ const ProductList: React.FC<IProps> = ({
       <div className={`${styles["product-list__divider"]}`}></div>
       <div className="flex flex-wrap flex-row-reverse justify-center gap-8 sm:gap-16 md:gap-8 lg:gap-1 lg:py-4 xl:gap-8 2xl:gap-8 py-8">
         {filteredProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            id={product.id}
-            name={product.title}
-            price={product.price}
-            image={product.image1}
-            quantity={product.quantity}
-          />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
       {/*paginaiton*/}

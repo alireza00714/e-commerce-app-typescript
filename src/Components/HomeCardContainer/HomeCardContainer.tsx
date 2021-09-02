@@ -4,17 +4,23 @@ import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "./HomeCardContainer.css";
+import { IProduct } from "../../types";
+import ProductCard from "../ProductCard/ProductCard";
 
 SwiperCore.use([Pagination, Navigation]);
 
 interface IHomeCardContainer {
   title: string;
+  products: IProduct[];
 }
 
-const HomeCardContainer: React.FC<IHomeCardContainer> = ({ title }) => {
+const HomeCardContainer: React.FC<IHomeCardContainer> = ({
+  title,
+  products,
+}) => {
   return (
     <div className="card-container w-100 shadow-md md:shodow-lg rounded-lg">
-      <div className="flex justify-end items-center w-full mb-4 p-4 md:p-6">
+      <div className="flex justify-end items-center w-full p-4 md:p-6">
         <span className=" font-bold text-xl md:text-2xl">{title}</span>
         <span className="card-container__dot-title w-3 h-3 rounded-full ml-2"></span>
       </div>
@@ -32,7 +38,7 @@ const HomeCardContainer: React.FC<IHomeCardContainer> = ({ title }) => {
             },
             "768": {
               slidesPerView: 3,
-              spaceBetween: 50,
+              spaceBetween: 70,
             },
             "1024": {
               slidesPerView: 4,
@@ -48,33 +54,13 @@ const HomeCardContainer: React.FC<IHomeCardContainer> = ({ title }) => {
             },
           }}
         >
-          <SwiperSlide>
-            
-          </SwiperSlide>
-          <SwiperSlide>
-            
-          </SwiperSlide>
-          <SwiperSlide>
-            
-          </SwiperSlide>
-          <SwiperSlide>
-            
-          </SwiperSlide>
-          <SwiperSlide>
-            
-          </SwiperSlide>
-          <SwiperSlide>
-            
-          </SwiperSlide>
-          <SwiperSlide>
-            
-          </SwiperSlide>
-          <SwiperSlide>
-            
-          </SwiperSlide>
-          <SwiperSlide>
-            
-          </SwiperSlide>
+          {products.map((product) => (
+            <SwiperSlide key={product.id}>
+              <div>
+                <ProductCard product={product} />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

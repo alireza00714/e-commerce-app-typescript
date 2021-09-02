@@ -5,11 +5,13 @@ import { HiMenu } from "react-icons/hi";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { ICategory } from "../../types";
 import { Link, useLocation } from "react-router-dom";
-
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 const Header = () => {
   const { pathname } = useLocation();
   const [isCategoryOpen, setIsCategoryOpen] = useState<boolean>(false);
   const [categories, setCategories] = useState<ICategory[]>([]);
+  const { totalQuantity } = useContext(CartContext);
 
   useEffect(() => {
     fetch("/api/categories")
@@ -23,22 +25,30 @@ const Header = () => {
         className={`${styles.header} h-16 w-full fixed top-0 z-10 shadow-lg lg:container lg:top-3 lg:rounded-lg lg:left-1/2 lg:transform lg:-translate-x-1/2 flex items-center justify-between px-3`}
       >
         <div className="flex">
-          {!(pathname === "/pay/cart/1") && (
+          {!(
+            pathname === "/pay/cart/1" ||
+            pathname === "/login" ||
+            pathname === "/register"
+          ) && (
             <Link
               to={"/pay/cart/1"}
               className="relative mr-4 cursor-pointer select-none h-full"
             >
               <FaShoppingCart size="2rem" fill="#fff" />
-              <span
-                className={`${styles["header__cartcount"]} w-6 h-6 absolute -top-2 -right-2 rounded-full flex items-center justify-center fd font-medium`}
-              >
-                2
-              </span>
+              {totalQuantity > 0 && (
+                <span
+                  className={`${styles["header__cartcount"]} w-6 h-6 absolute -top-2 -right-2 rounded-full flex items-center justify-center fd font-medium`}
+                >
+                  {totalQuantity}
+                </span>
+              )}
             </Link>
           )}
-          <div className="cursor-pointer">
-            <FaUserCircle size="2rem" fill="#fff" />
-          </div>
+          {!(pathname === "/login" || pathname === "/register") && (
+            <Link to="/login" className="cursor-pointer">
+              <FaUserCircle size="2rem" fill="#fff" />
+            </Link>
+          )}
         </div>
         <Link
           to="/"
@@ -51,7 +61,11 @@ const Header = () => {
             <FaShoppingBag size="2.5rem" fill="#fff" />
           </span>
         </Link>
-        {!(pathname === "/pay/cart/1") && (
+        {!(
+          pathname === "/pay/cart/1" ||
+          pathname === "/login" ||
+          pathname === "/register"
+        ) && (
           <div
             className="flex items-center cursor-pointer select-none h-full"
             onMouseEnter={() => {

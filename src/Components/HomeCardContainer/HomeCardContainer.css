@@ -7,8 +7,16 @@
 }
 
 .swiper-container {
-  padding-right: 4rem;
-  padding-bottom: 5rem;
+  padding: 11rem 9rem 17rem 0;
+}
+
+.swiper-slide{
+  text-align: right !important;
+}
+
+.swiper-slide img {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 .swiper-button-prev,
@@ -26,7 +34,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .swiper-container{
-    padding-left: 14rem;
+  .swiper-container {
+    padding-left: 11rem;
   }
 }

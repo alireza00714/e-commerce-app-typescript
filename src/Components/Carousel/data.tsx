@@ -4,26 +4,26 @@ export const carouselData: ICarouselData[] = [
   {
     id: 0,
     imageSrc:
-      "https://i.picsum.photos/id/287/1400/600.jpg?hmac=pNkVpHQBcSGHGtrm_4slQO_tFJpdhbPPDW1sCCimSyA",
+      "https://dkstatics-public.digikala.com/digikala-adservice-banners/38c741a641d3a7d08751ae9d245f417852d12666_1629899140.jpg?x-oss-process=image/quality,q_80",
   },
   {
     id: 1,
     imageSrc:
-      "https://i.picsum.photos/id/318/1400/600.jpg?hmac=K83o_xsMe_1lR2GTYWyFnNA_6CLs5e2tZpLzacx19C4",
+      "https://dkstatics-public.digikala.com/digikala-adservice-banners/274fe93c11e643d2ed36276c85fc0d2977393801_1630419287.jpg?x-oss-process=image/quality,q_80",
   },
   {
     id: 2,
     imageSrc:
-      "https://i.picsum.photos/id/1010/1400/600.jpg?hmac=KQhjsP1S6Vg87OyfLBj8RaeOqSRdoPCyeUSBGvKoG00",
+      "https://dkstatics-public.digikala.com/digikala-adservice-banners/0a31a6a5f36c7cb716a9949acf8d96272c89ec77_1630141169.jpg?x-oss-process=image/quality,q_80",
   },
   {
     id: 3,
     imageSrc:
-      "https://i.picsum.photos/id/128/1400/600.jpg?hmac=LqEne79ULj8J6XIZZ4xGqe813W5MoWNMjzYJ3kLzL18",
+      "https://dkstatics-public.digikala.com/digikala-adservice-banners/557e3bae0426995e6febe1723105fbf9ec974308_1630124059.jpg?x-oss-process=image/quality,q_80",
   },
   {
     id: 4,
     imageSrc:
-      "https://i.picsum.photos/id/838/1400/600.jpg?hmac=b9gox1p0sqMhjlniA8g9HJ_lj0bl2tUXHEW47W8chbc",
+      "https://dkstatics-public.digikala.com/digikala-adservice-banners/192892d4d6a07d659f0ec8b5a46747dd01af5561_1629889699.jpg?x-oss-process=image/quality,q_80",
   },
 ];

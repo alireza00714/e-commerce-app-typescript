@@ -1,8 +1,14 @@
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 import CartItem from "../CartItem/CartItem";
 import Checkout from "../Checkout/Checkout";
 import styles from "./Cart.module.css";
 
 const Cart = () => {
+  const { items, resetCart } = useContext(CartContext);
+  const resetCartHandler = () => {
+    resetCart();
+  };
   return (
     <div className="container mx-auto px-4">
       <div className={`${styles.cart} flex flex-col rounded-xl shadow-lg`}>
@@ -13,7 +19,10 @@ const Cart = () => {
               className={`${styles["cart__dot-title"]} w-4 h-4 rounded-full`}
             ></span>
           </div>
-          <button className={`${styles["cart__reset-btn"]} text-white px-2 py-1 rounded-md`}>
+          <button
+            className={`${styles["cart__reset-btn"]} text-white px-2 py-1 rounded-md`}
+            onClick={resetCartHandler}
+          >
             خالی کردن سبد خرید
           </button>
         </div>
@@ -23,12 +32,9 @@ const Cart = () => {
             <Checkout />
           </div>
           <div className="order-1 lg:order-none col-span-1 lg:col-span-4 flex flex-col gap-4 lg:gap-5">
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
+            {items.map((item) => (
+              <CartItem key={item.id} item={item} />
+            ))}
           </div>
         </div>
       </div>

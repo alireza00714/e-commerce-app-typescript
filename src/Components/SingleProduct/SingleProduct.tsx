@@ -3,8 +3,6 @@ import "./Swiper.styles.css";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/thumbs/thumbs.min.css";
-import { AiFillHeart } from "react-icons/ai";
-import { MdShare } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Thumbs } from "swiper/core";
@@ -30,7 +28,7 @@ const SingleProduct = () => {
         className={`${styles["single-product"]} rounded-xl shadow-lg flex flex-col lg:flex-row lg:`}
       >
         <div className="flex flex-col">
-          <div className="flex justify-between items-center flex-row-reverse pl-4 lg:pl-6 lg:flex-row">
+          <div className="flex items-center flex-row-reverse pl-4 lg:pl-6">
             <div className="flex flex-col gap-2 order-first lg:order-none pr-4 lg:py-6 lg:pr-6">
               <h3 className="text-xl font-semibold text-right">
                 {product?.title}

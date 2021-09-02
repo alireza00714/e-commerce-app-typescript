@@ -7,6 +7,18 @@ export interface ICarousel {
   data: ICarouselData[];
 }
 
+interface ISentCartProduct {
+  id: string;
+  title: string;
+  image: string;
+  price: number;
+}
+
+export interface ICartProduct extends ISentCartProduct {
+  quantity: number;
+  totalPrice: number;
+}
+
 export interface IProduct {
   id: string;
   title: string;
@@ -26,11 +38,10 @@ export interface ICategory {
   name: string;
 }
 
-export interface User {
+export interface IUser {
   id: string;
   username: string;
   password: string;
-  registrationDate: string;
   email: string;
   cart: Product[];
 }

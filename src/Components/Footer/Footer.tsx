@@ -74,7 +74,7 @@ const Footer = () => {
         <div className="w-40 h-40">
           <img
             className="w-full h-full"
-            src="https://bayanbox.ir/view/5987762950867383124/samandehi-2.png"
+            src="https://www.p30web.org/wp-content/uploads/2017/02/p30web-samandehi.png"
             alt="samandehi"
           />
         </div>

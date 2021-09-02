@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
 import { makeServer } from "./Mirage/server";
-import store from "./store";
+import CartProvider from "./Context/CartContext";
+import UserProvider from "./Context/UserContext";
 
 if (process.env.NODE_ENV === "development") {
   makeServer({ environment: "development" });
@@ -13,11 +13,13 @@ if (process.env.NODE_ENV === "development") {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
+    <UserProvider>
+      <CartProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </CartProvider>
+    </UserProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
