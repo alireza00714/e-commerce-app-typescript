@@ -10,6 +10,11 @@
   background-color: #9c203f;
 }
 
+.single-product__add-to-card-btn:disabled{
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
 .single-product__divider {
   border: #c4c4c4 0.25px solid;
 }

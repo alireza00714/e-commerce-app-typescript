@@ -1,4 +1,4 @@
-const users = [
+const mockUsers = [
   {
     username: "alireza",
     email: "alireza@gmail.com",
@@ -13,4 +13,4 @@ const users = [
   },
 ];
 
-export default users;
+export default mockUsers;

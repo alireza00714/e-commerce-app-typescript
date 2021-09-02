@@ -1,6 +1,7 @@
 import { createServer, Model } from "miragejs";
 import mockProducts from "./mockProduct";
 import mockCategories from "./mockCategory";
+import mockUsers from "./mockUser";
 
 export function makeServer({ environment = "test" } = {}) {
   let server = createServer({
@@ -9,6 +10,7 @@ export function makeServer({ environment = "test" } = {}) {
     models: {
       product: Model,
       category: Model,
+      user: Model,
     },
 
     seeds(server) {
@@ -28,6 +30,14 @@ export function makeServer({ environment = "test" } = {}) {
       });
       mockCategories.forEach((category) => {
         server.create("category", { name: category });
+      });
+      mockUsers.forEach((user) => {
+        server.create("user", {
+          username: user.username,
+          email: user.email,
+          password: user.password,
+          cart: user.cart,
+        });
       });
     },
 
@@ -50,6 +60,16 @@ export function makeServer({ environment = "test" } = {}) {
 
       this.get("/categories", (schema) => {
         return schema.categories.all();
+      });
+
+      this.get("/users/:username", (schema, request) => {
+        let userName = request.params.username;
+        return schema.users.find(userName);
+      });
+
+      this.post("/users", (schema, request) => {
+        let user = JSON.parse(request.requestBody);
+        return schema.users.create(user);
       });
     },
   });

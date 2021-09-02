@@ -1,7 +1,20 @@
 import "./LoginPage.styles.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+interface ILoginInput {
+  email: string;
+  password: string;
+}
 
 const LoginPage = () => {
+  const [inputs, setInputs] = useState<ILoginInput>({
+    email: "",
+    password: "",
+  });
+
+  
+
   return (
     <div className="w-full h-full flex justify-center items-center">
       <div className="flex flex-col items-center border border-gray-300 rounded-lg pt-6 pb-4 px-6">

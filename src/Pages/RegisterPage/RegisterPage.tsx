@@ -1,7 +1,23 @@
 import "./Register.styles.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+interface IRegisterInput {
+  username: string;
+  email: string;
+  password: string;
+  password2: string;
+}
 
 const RegisterPage = () => {
+  const [inputs, setInputs] = useState<IRegisterInput>({
+    username: "",
+    email: "",
+    password: "",
+    password2: "",
+  });
+
+  
   return (
     <div className="w-full h-full flex justify-center items-center">
       <div className="flex flex-col items-center border border-gray-300 rounded-lg pt-6 pb-4 px-6">

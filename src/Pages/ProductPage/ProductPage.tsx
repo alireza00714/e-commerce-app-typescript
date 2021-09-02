@@ -7,7 +7,7 @@ const ProductPage = () => {
   return (
     <>
       <Header />
-      <main className="container px-4 mx-auto my-24 flex justify-center items-center">
+      <main className="my-24 flex justify-center items-center grid grid-cols-1">
         <SingleProduct />
       </main>
       <Footer />

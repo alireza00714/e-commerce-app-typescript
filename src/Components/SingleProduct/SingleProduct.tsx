@@ -8,12 +8,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Thumbs } from "swiper/core";
 import { useParams } from "react-router-dom";
 import { IProduct } from "../../types";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 
 SwiperCore.use([Navigation, Thumbs]);
 
 const SingleProduct = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore>();
   const [product, setProduct] = useState<IProduct>();
+  const { addToCart } = useContext(CartContext);
   const { id } = useParams<{ id: string }>();
 
   useEffect(() => {
@@ -22,18 +25,26 @@ const SingleProduct = () => {
       .then((data) => setProduct(data.product));
   }, [id]);
 
+  const addToCarthandler = () => {
+    addToCart({
+      id: product!.id,
+      image: product!.image1,
+      price: product!.price,
+      title: product!.title,
+    });
+  };
   return (
     <div className="container mx-auto mt-24 mb-16 lg:px-2">
       <div
-        className={`${styles["single-product"]} rounded-xl shadow-lg flex flex-col lg:flex-row lg:`}
+        className={`${styles["single-product"]} rounded-xl shadow-lg flex flex-col lg:flex-row`}
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col lg:w-4/6">
           <div className="flex items-center flex-row-reverse pl-4 lg:pl-6">
             <div className="flex flex-col gap-2 order-first lg:order-none pr-4 lg:py-6 lg:pr-6">
-              <h3 className="text-xl font-semibold text-right">
+              <h3 className="text-xl font-semibold text-right fd">
                 {product?.title}
               </h3>
-              <span className="text-right text-gray-400 text-sm mb-4 lg:mb-0">
+              <span className="text-right text-gray-400 text-sm mb-4 lg:mb-0 fd">
                 {product?.underTitle}
               </span>
             </div>
@@ -46,11 +57,15 @@ const SingleProduct = () => {
               className={`${styles["single-product__add-to-card-container"]} rounded-md flex flex-col justify-between gap-4 p-2`}
             >
               <div className="flex justify-between lg:w-64 px-2">
-                <span className="fd text-lg font-semibold">542,000</span>
+                <span className="fd text-lg font-semibold">
+                  {product?.quantity === 0 ? "ناموجود" : product?.price}
+                </span>
                 <span className="text-lg font-semibold">:قیمت</span>
               </div>
               <button
                 className={`${styles["single-product__add-to-card-btn"]} text-white text-lg font-bold rounded py-2`}
+                disabled={product?.quantity === 0 ? true : false}
+                onClick={addToCarthandler}
               >
                 افزودن به سبد خرید
               </button>
@@ -74,7 +89,7 @@ const SingleProduct = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col lg:pr-6 lg:py-6 order-last lg:order-none px-4 lg:px-0 mb-4 lg:mb-0">
+          <div className="flex flex-col lg:px-6 lg:py-6 order-last lg:order-none px-4 lg:px-0 mb-4 lg:mb-0">
             {product?.description && (
               <>
                 <h5 className="font-semibold text-right text-lg">
@@ -95,6 +110,7 @@ const SingleProduct = () => {
               slidesPerView={1}
               spaceBetween={10}
               navigation={true}
+              centeredSlides={true}
               thumbs={{ swiper: thumbsSwiper }}
               className="mySwiper2"
             >

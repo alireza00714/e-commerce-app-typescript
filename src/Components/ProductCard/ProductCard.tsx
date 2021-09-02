@@ -57,12 +57,14 @@ const ProductCard: React.FC<IProps> = ({ product }) => {
           )}
         </div>
         <div className="flex items-center">
-          <div
-            className={`${styles["product-card__add-to-cart-btn"]} mr-1`}
-            onClick={AddToCartHandler}
-          >
-            <MdAddShoppingCart />
-          </div>
+          {product.quantity > 0 && (
+            <div
+              className={`${styles["product-card__add-to-cart-btn"]} mr-1`}
+              onClick={AddToCartHandler}
+            >
+              <MdAddShoppingCart />
+            </div>
+          )}
         </div>
       </div>
     </div>
