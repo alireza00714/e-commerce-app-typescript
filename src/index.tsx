@@ -7,7 +7,10 @@ import { makeServer } from "./Mirage/server";
 import CartProvider from "./Context/CartContext";
 import UserProvider from "./Context/UserContext";
 
-if (process.env.NODE_ENV === "development") {
+if (
+  process.env.NODE_ENV === "development" ||
+  process.env.NODE_ENV === "production"
+) {
   makeServer({ environment: "development" });
 }
 
