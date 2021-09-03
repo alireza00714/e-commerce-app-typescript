@@ -1,21 +1,21 @@
 import "./Register.styles.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
-interface IRegisterInput {
-  username: string;
-  email: string;
-  password: string;
-  password2: string;
-}
+// interface IRegisterInput {
+//   username: string;
+//   email: string;
+//   password: string;
+//   password2: string;
+// }
 
 const RegisterPage = () => {
-  const [inputs, setInputs] = useState<IRegisterInput>({
-    username: "",
-    email: "",
-    password: "",
-    password2: "",
-  });
+  // const [inputs, setInputs] = useState<IRegisterInput>({
+  //   username: "",
+  //   email: "",
+  //   password: "",
+  //   password2: "",
+  // });
 
   
   return (

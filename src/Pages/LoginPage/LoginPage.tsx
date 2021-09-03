@@ -1,17 +1,17 @@
 import "./LoginPage.styles.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
-interface ILoginInput {
-  email: string;
-  password: string;
-}
+// interface ILoginInput {
+//   email: string;
+//   password: string;
+// }
 
 const LoginPage = () => {
-  const [inputs, setInputs] = useState<ILoginInput>({
-    email: "",
-    password: "",
-  });
+  // const [inputs, setInputs] = useState<ILoginInput>({
+  //   email: "",
+  //   password: "",
+  // });
 
   
 

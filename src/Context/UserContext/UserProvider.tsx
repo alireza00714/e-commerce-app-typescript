@@ -13,7 +13,7 @@ export const UserContext = createContext(contextDefaultValues);
 
 const UserProvider: FC = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-  const [username, setUsername] = useState<string>("");
+  const [username, ] = useState<string>("");
 
   const login = () => {
     setIsAuthenticated(true);
